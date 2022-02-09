@@ -31,23 +31,21 @@ class _ScreenOneState extends State<ScreenOne> {
   }
 
   fetchData() async {
-    Album result = await Api.fetchAlbum();
-    print(result); //instance of Album
-    print(result.id); // 1
+    Album result = await Api.fetchAlbum(); // 1
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.backpack),
-        title: Text("Screen 1"),
+        leading: const Icon(Icons.backpack),
+        title: const Text("Screen 1"),
         actions: [
           IconButton(
             onPressed: () {
               Navigator.pop(context, _counter);
             },
-            icon: Icon(Icons.ac_unit),
+            icon: const Icon(Icons.ac_unit),
           ),
         ],
       ),

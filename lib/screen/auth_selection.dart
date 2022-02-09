@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tutorial/screen_1.dart';
 
 // ignore: use_key_in_widget_constructors
 class AuthSelectionScreen extends StatelessWidget {
@@ -54,7 +55,14 @@ class AuthSelectionScreen extends StatelessWidget {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ScreenOne(counter: 1),
+                      ),
+                    );
+                  },
                   child: Container(
                     width: MediaQuery.of(context).size.width / 3,
                     height: 50,
@@ -85,6 +93,7 @@ class AuthSelectionScreen extends StatelessWidget {
   }
 }
 
+// ignore: use_key_in_widget_constructors
 class SelectionImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

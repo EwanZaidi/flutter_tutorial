@@ -5,6 +5,7 @@ import 'package:flutter_tutorial/models/album.dart';
 class ScreenOne extends StatefulWidget {
   final int counter;
 
+  // ignore: prefer_const_constructors_in_immutables, use_key_in_widget_constructors
   ScreenOne({required this.counter});
 
   @override
